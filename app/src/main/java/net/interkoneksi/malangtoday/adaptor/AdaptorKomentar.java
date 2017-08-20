@@ -49,4 +49,8 @@ public class AdaptorKomentar extends RecyclerView.Adapter<AdaptorKomentar.DataOb
             content = (TextView) itemView.findViewById(R.id.content);
         }
     }
+    @Override
+    public int getItemCount(){
+        return mDataset.size();
+    }
 }

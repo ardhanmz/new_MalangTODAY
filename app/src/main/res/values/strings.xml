@@ -1,8 +1,50 @@
 <resources>
     <string name="app_name">MalangTODAY</string>
-
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_favorite">Add to Archive</string>
+    <string name="action_share">Bagikan</string>
+    <string name="home">Beranda</string>
+    <string name="comments">Komentar</string>
+    <string name="categories">Kategori</string>
+    <string name="archive">Archive</string>
+    <string name="about">Tentang Kami</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="written_by">Penulis :</string>
+    <string name="on_date">Pada </string>
+    <string name="share_with">Bagikang Dengan</string>
+    <string name="share_title">Saya Membagikan</string>
+    <string name="share_body">Saya Membagikan Tautan %1$s. It\'s Kunjungi Untuk Membaca \n %2$s</string>
+    <string name="name">Nama</string>
+    <string name="email">Email</string>
+    <string name="content">Konten</string>
+    <string name="submit">Submit</string>
+    <string name="submitting">Mengirim Komentar...</string>
+    <string name="add_comment">Tambah Komentar</string>
+    <string name="comment_status_close_error">Komentar Untuk Post Ini Dimatikan!</string>
+    <string name="comment_submit_success">Komentar Anda Terkirim ! Akan Muncul Setelah Persetujuan \'s Administrator</string>
+    <string name="retry">Ulangi</string>
+    <string name="no_data_message">Tidak Dapat Mendapatkan Data! Mohon Cek Koneksi Anda Atau Cari Dengan Kueri Lain</string>
+    <string name="no_archive_message">You don\'t have any archived data!</string>
+    <string name="no_comment_message">Belum Ada Percakapan Untuk Postingan Ini! Jadilah Orang Pertama</string>
+    <string name="crash_report">We are sorry to inform you that the application has crashed, because of an unknown error! Send it\'s report to the developer to solve it!</string>
+    <string name="crash_title">Application Crash!</string>
+    <string name="no_internet">Please check your internet connection!</string>
+    <string name="invalid_email">Invalid Email Adress!</string>
+    <string name="hint_search">Search post...</string>
+    <string name="close_message">Press back again to exit!</string>
+    <string name="added_to_favorites">Post is saved to your archive!</string>
+    <string name="removed_from_favorites">Post is removed from archive!</string>
 
-    <string name="action_settings">Settings</string>
+    <!--about page data-->
+    <string name="about_content">Lorem ipsum dolor sit amet, cu solum laudem graeci has, eam at enim mazim nonumes, te eam mnesarchum adversarium. No mel nibh saperet, cu causae admodum nominati eam. Ius an nihil veniam, ad zril alterum scripserit eam. An duo sumo nemore minimum, no quod vide dicant pro, quem ignota reprimique ea sed.</string>
+    <string name="developer">Developed By : Mehrdad Garebaghi</string>
+    <string name="companey">Technopedia team.</string>
+    <string name="version">Version number 2 (2018/10/18)</string>
+    <string name="social_1_adress">http://mgarebaghi.ir/en/</string>
+    <string name="social_2_adress">http://mgarebaghi.ir/en/</string>
+    <string name="social_3_adress">http://mgarebaghi.ir/en/</string>
+    <string name="social_4_adress">http://mgarebaghi.ir/en/</string>
+    <string name="send_comment">Mengirim Komentar</string>
+    <string name="title_dialog_comment">Tambah Komentar</string>
 </resources>
