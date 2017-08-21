@@ -12,15 +12,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
 
-import net.interkoneksi.malangtoday.adaptor.AdaptorPost;
-import net.interkoneksi.malangtoday.app.DetailPost;
-import net.interkoneksi.malangtoday.app.RecyclerItemClickListener;
-import net.interkoneksi.malangtoday.model.ModelPost;
+import net.interkoneksi.malangtoday.JSONParser.ModelPost;
 import net.interkoneksi.malangtoday.R;
+import net.interkoneksi.malangtoday.adaptor.AdaptorPost;
 import net.interkoneksi.malangtoday.util.KonfigurasiAPI;
 
 import org.json.JSONArray;
@@ -83,7 +80,7 @@ public class Post extends Fragment {
             @Override
             public void onItemClick(View view, int position) {
                 if (!swipeRefreshLayout.isRefreshing()) {
-                    Intent intent = new Intent(getActivity(), DetailPost.class);
+                    Intent intent = new Intent(getActivity(), Artikel.class);
                     intent.putExtra("data", postArray.get(position).parseJSON().toString());
                     if (selectedCat == -1) {
                         intent.putExtra("is_archive", "true");

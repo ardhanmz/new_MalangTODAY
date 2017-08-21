@@ -10,11 +10,11 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.LinearLayout;
 
-import net.interkoneksi.malangtoday.adaptor.AdaptorKomentar;
-import net.interkoneksi.malangtoday.model.ModelKomentar;
+import net.interkoneksi.malangtoday.JSONParser.ModelKomentar;
 import net.interkoneksi.malangtoday.R;
+import net.interkoneksi.malangtoday.adaptor.AdaptorKomentar;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 

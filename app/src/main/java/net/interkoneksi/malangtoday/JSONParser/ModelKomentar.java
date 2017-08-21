@@ -1,4 +1,4 @@
-package net.interkoneksi.malangtoday.model;
+package net.interkoneksi.malangtoday.JSONParser;
 
 import android.util.Log;
 

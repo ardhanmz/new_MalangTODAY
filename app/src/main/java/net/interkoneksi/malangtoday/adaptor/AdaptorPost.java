@@ -10,8 +10,8 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
+import net.interkoneksi.malangtoday.JSONParser.ModelPost;
 import net.interkoneksi.malangtoday.R;
-import net.interkoneksi.malangtoday.model.ModelPost;
 
 import java.util.List;
 
@@ -59,6 +59,8 @@ public class AdaptorPost extends RecyclerView.Adapter<AdaptorPost.DataObjectHold
                 load(mDataset.get(position).img)
                 .placeholder(R.drawable.placeholder)
                 .into(holder.image);
+        holder.view_count.setText(mDataset.get(position).view_count);
+
     }
     public void addItem(ModelPost obj, int index){
         mDataset.add(obj);
@@ -74,8 +76,8 @@ public class AdaptorPost extends RecyclerView.Adapter<AdaptorPost.DataObjectHold
     }
 
     public class DataObjectHolder extends RecyclerView.ViewHolder{
-        TextView title, comment, category;
-        ImageView comment_img, image;
+        TextView title, comment, category,view_count;
+        ImageView comment_img, image, view_count_img;
 
         public DataObjectHolder(View itemView){
             super(itemView);
@@ -84,7 +86,8 @@ public class AdaptorPost extends RecyclerView.Adapter<AdaptorPost.DataObjectHold
             category = (TextView) itemView.findViewById(R.id.category);
             image = (ImageView) itemView.findViewById(R.id.img);
             comment_img = (ImageView) itemView.findViewById(R.id.comment_count_img);
-
+            view_count_img = (ImageView) itemView.findViewById(R.id.view_count_img);
+            view_count = (TextView) itemView.findViewById(R.id.view_count);
         }
     }
 

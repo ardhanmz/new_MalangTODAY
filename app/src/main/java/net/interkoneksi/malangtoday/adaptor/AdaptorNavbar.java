@@ -8,12 +8,11 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import net.interkoneksi.malangtoday.JSONParser.ModelKategori;
 import net.interkoneksi.malangtoday.R;
-import net.interkoneksi.malangtoday.model.ModelKategori;
 
 import java.util.HashMap;
 import java.util.List;
-import java.util.Objects;
 
 /**
  * Created by Ardhan MZ on 16-Aug-17.

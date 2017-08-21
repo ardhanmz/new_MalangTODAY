@@ -1,29 +1,27 @@
 package net.interkoneksi.malangtoday.app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.view.MenuItemCompat;
-import android.support.v7.widget.SearchView;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ExpandableListView;
-import android.widget.Toast;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
 
+import net.interkoneksi.malangtoday.JSONParser.ModelKategori;
 import net.interkoneksi.malangtoday.R;
 import net.interkoneksi.malangtoday.adaptor.AdaptorNavbar;
-import net.interkoneksi.malangtoday.model.ModelKategori;
 import net.interkoneksi.malangtoday.util.KonfigurasiAPI;
 
 import org.json.JSONArray;
@@ -37,7 +35,7 @@ import java.util.List;
 import cz.msebera.android.httpclient.Header;
 
 public class MainActivity extends AppCompatActivity
-        implements SearchView.OnQueryTextListener{
+        implements SearchView.OnQueryTextListener, NavigationView.OnNavigationItemSelectedListener{
 
     String Kategori_url = "get_category_index/";
     private Toolbar toolbar;
@@ -60,12 +58,15 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar_main);
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         navview = (NavigationView) findViewById(R.id.nav_view);
         navmenu = (ExpandableListView) findViewById(R.id.nav_menu);
 
         setSupportActionBar(toolbar);
+        if (toolbar != null){
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
+        }
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, mDrawer, toolbar,R.string.navigation_drawer_open,
                 R.string.navigation_drawer_close);
         mDrawer.addDrawerListener(toggle);
@@ -100,15 +101,15 @@ public class MainActivity extends AppCompatActivity
         navmenu.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
             public boolean onChildClick(ExpandableListView expandableListView, View view, int i, int i1, long l) {
-                selectCat = listKategory.get(i).id;
+                selectCat = listKategory.get(i1).id;
                 loadPost(selectCat,"");
                 onBackPressed();
                 return true;
             }
         });
         loadPost(selectCat,"");
-
     }
+
     public void loadPost(int cat, String query){
         postpage= true;
         if (itemsearch != null){
@@ -138,6 +139,9 @@ public class MainActivity extends AppCompatActivity
         nListChild.put(nlistHeader.get(1), listKategory);
         item = new AdaptorNavbar.ExpandMenu();
         item.iconName= getResources().getString(R.string.about);
+        nlistHeader.add(item);
+        item = new AdaptorNavbar.ExpandMenu();
+        item.iconName = getResources().getString(R.string.hipster_bar);
         nlistHeader.add(item);
 
     }
@@ -219,7 +223,18 @@ public class MainActivity extends AppCompatActivity
 
         }
     }
-
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.nav_share:
+                Intent i = new Intent(MainActivity.this,HipsterActivity.class);
+                startActivity(i);
+                break;
+        }
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
     @Override
     public boolean onQueryTextSubmit(String query) {
         loadPost(0, query);

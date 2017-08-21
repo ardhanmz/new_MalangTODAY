@@ -2,12 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.interkoneksi.malangtoday">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name=".app.App"
+        android:name=".util.CrashReporter"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -24,11 +23,23 @@
             </intent-filter>
         </activity>
 
-        <!--database attributes-->
-        <meta-data android:name="DATABASE" android:value="malangtoday.db" />
-        <meta-data android:name="VERSION" android:value="1" />
-        <meta-data android:name="QUERY_LOG" android:value="true" />
-        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="net.interkoneksi.malangtoday" />
+        <!-- database attributes -->
+        <meta-data
+            android:name="DATABASE"
+            android:value="malangtoday.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="1" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="net.interkoneksi.malangtoday" />
+
+        <activity
+            android:name=".app.HipsterActivity"
+            android:label="@string/title_activity_hipster"></activity>
     </application>
 
 </manifest>

@@ -8,8 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import net.interkoneksi.malangtoday.JSONParser.ModelKomentar;
 import net.interkoneksi.malangtoday.R;
-import net.interkoneksi.malangtoday.model.ModelKomentar;
 
 import java.util.List;
 

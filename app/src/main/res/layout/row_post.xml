@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp">
@@ -29,18 +30,6 @@
                     android:maxHeight="180dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/placeholder" />
-
-                <TextView
-                    android:id="@+id/category"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@color/colorAccent"
-                    android:padding="8dp"
-                    android:text=""
-                    android:textColor="@android:color/white"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true" />
             </RelativeLayout>
 
             <LinearLayout
@@ -75,14 +64,52 @@
 
                     <ImageView
                         android:id="@+id/comment_count_img"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_action_comment_post" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="34dp"
+                        app:srcCompat="@drawable/ic_action_comment_post" />
                 </LinearLayout>
 
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="16dp"
+                >
+                <TextView
+                    android:id="@+id/category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="left"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/view_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:gravity="right"
+                        android:text="1"
+                        android:textSize="18dp" />
+
+                    <ImageView
+                        android:id="@+id/view_count_img"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        app:srcCompat="@drawable/ic_view_count" />
+                </LinearLayout>
+            </LinearLayout>
 
         </LinearLayout>
+
 
     </LinearLayout>
 

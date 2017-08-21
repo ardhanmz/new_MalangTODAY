@@ -4,7 +4,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_favorite">Add to Archive</string>
     <string name="action_share">Bagikan</string>
-    <string name="home">Beranda</string>
+    <string name="home">Berita Terbaru</string>
     <string name="comments">Komentar</string>
     <string name="categories">Kategori</string>
     <string name="archive">Archive</string>
@@ -27,14 +27,12 @@
     <string name="no_data_message">Tidak Dapat Mendapatkan Data! Mohon Cek Koneksi Anda Atau Cari Dengan Kueri Lain</string>
     <string name="no_archive_message">You don\'t have any archived data!</string>
     <string name="no_comment_message">Belum Ada Percakapan Untuk Postingan Ini! Jadilah Orang Pertama</string>
-    <string name="crash_report">We are sorry to inform you that the application has crashed, because of an unknown error! Send it\'s report to the developer to solve it!</string>
-    <string name="crash_title">Application Crash!</string>
-    <string name="no_internet">Please check your internet connection!</string>
-    <string name="invalid_email">Invalid Email Adress!</string>
+    <string name="crash_report">Maaf Aplikasi Tidak Berjalan Baik. Ingin Melaporkan Ke Pengembang</string>
+    <string name="crash_title">Aplikasi Berhenti Tiba Tiba!</string>
+    <string name="no_internet">Cek Internet Anda, Pastikan Terhubung</string>
+    <string name="invalid_email">Email Salah</string>
     <string name="hint_search">Search post...</string>
     <string name="close_message">Press back again to exit!</string>
-    <string name="added_to_favorites">Post is saved to your archive!</string>
-    <string name="removed_from_favorites">Post is removed from archive!</string>
 
     <!--about page data-->
     <string name="about_content">Lorem ipsum dolor sit amet, cu solum laudem graeci has, eam at enim mazim nonumes, te eam mnesarchum adversarium. No mel nibh saperet, cu causae admodum nominati eam. Ius an nihil veniam, ad zril alterum scripserit eam. An duo sumo nemore minimum, no quod vide dicant pro, quem ignota reprimique ea sed.</string>
@@ -47,4 +45,9 @@
     <string name="social_4_adress">http://mgarebaghi.ir/en/</string>
     <string name="send_comment">Mengirim Komentar</string>
     <string name="title_dialog_comment">Tambah Komentar</string>
+    <string name="title_activity_hipster">HipsterActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="hipster_bar">Hipster</string>
 </resources>

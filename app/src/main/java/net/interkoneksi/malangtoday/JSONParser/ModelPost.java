@@ -1,4 +1,4 @@
-package net.interkoneksi.malangtoday.model;
+package net.interkoneksi.malangtoday.JSONParser;
 
 import android.util.Log;
 
@@ -19,7 +19,7 @@ public class ModelPost extends SugarRecord{
     private static final String TAG="ModelPost";
     public int id, comment_count;
     public String url,title,content,date,author,comment_status;
-    public String status, img;
+    public String status, img, view_count;
     public List<String> categories;
     public List<ModelKomentar> comment;
     public JSONArray kategorijson, komentarjson;
@@ -46,7 +46,7 @@ public class ModelPost extends SugarRecord{
             content= jsonObject.getString("date");
             for (int i=0;i<jsonObject.getJSONArray("categories").length();i++){
                 categories.add(jsonObject.getJSONArray("categories").getJSONObject(i)
-                .getString(title));
+                .getString("title"));
             }
             author = jsonObject.getJSONObject("author").getString("nickname");
             for (int i=0;i < jsonObject.getJSONArray("comments").length();i++){
@@ -57,9 +57,10 @@ public class ModelPost extends SugarRecord{
             comment_count = jsonObject.getInt("comment_count");
             comment_status = jsonObject.getString("comment_status");
             img = jsonObject.getString("thumbnail");
+            view_count = jsonObject.getJSONObject("custom_fields").getString("post_views_count");
         }catch (JSONException je){
             je.printStackTrace();
-            Log.d(TAG, "====Kesalahan Parsing Posting");
+            Log.d(TAG, "====Kesalahan Parsing Posting=====");
         }
     }
     public JSONObject parseJSON(){
