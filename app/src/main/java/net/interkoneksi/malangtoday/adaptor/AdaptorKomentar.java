@@ -8,8 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import net.interkoneksi.malangtoday.JSONParser.ModelKomentar;
 import net.interkoneksi.malangtoday.R;
-import net.interkoneksi.malangtoday.model.ModelKomentar;
 
 import java.util.List;
 
@@ -48,5 +48,9 @@ public class AdaptorKomentar extends RecyclerView.Adapter<AdaptorKomentar.DataOb
             title = (TextView) itemView.findViewById(R.id.title);
             content = (TextView) itemView.findViewById(R.id.content);
         }
+    }
+    @Override
+    public int getItemCount(){
+        return mDataset.size();
     }
 }

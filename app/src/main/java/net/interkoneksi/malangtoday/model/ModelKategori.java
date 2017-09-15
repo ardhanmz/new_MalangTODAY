@@ -30,7 +30,7 @@ public class ModelKategori extends SugarRecord{
             this.postCount=jsonObject.getInt("post_count");
         }catch (JSONException je){
             je.printStackTrace();
-            Log.d(TAG "====KESALAHAN PARSING KATEGORI=====");
+            Log.d(TAG, "====KESALAHAN PARSING KATEGORI=====");
         }
     }
 }
